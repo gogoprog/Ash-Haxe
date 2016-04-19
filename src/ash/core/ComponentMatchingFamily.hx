@@ -113,7 +113,7 @@ class ComponentMatchingFamily<TNode:Node<TNode>> implements IFamily<TNode>
                 }
             }
             var node:TNode = nodePool.get();
-            node.entity = entity;
+            node.entity = cast entity;
             for (componentClass in components.keys())
             {
                 Reflect.setField(node, components.get(componentClass), entity.get(componentClass));
